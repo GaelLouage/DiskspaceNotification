@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DiskSpaceNotification")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1fd46f657a59df74143f715e6d88fbb61bc7e1e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("DiskSpaceNotification")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DiskSpaceNotification")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

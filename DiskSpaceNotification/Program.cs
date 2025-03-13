@@ -5,7 +5,6 @@ internal class Program
 {
     private static System.Timers.Timer aTimer;
     private static DateTime _timeTreshold;
-    private static bool _isNotificationCalled;
     private static void Main(string[] args)
     {
         SetTimer();
@@ -15,7 +14,7 @@ internal class Program
     private static void SetTimer()
     {
     
-        _timeTreshold = DateTime.Today.AddHours(18).AddMinutes(28);
+        _timeTreshold = DateTime.Today.AddHours(20).AddMinutes(00);
   
         // Create a timer with a two second interval.
         aTimer = new System.Timers.Timer(1000);
@@ -30,9 +29,9 @@ internal class Program
 
     private static void OnTimerEvent(object sender, EventArgs e)
     {
-        if(DateTime.Now >= _timeTreshold && _isNotificationCalled is false)
+        if(DateTime.Now >= _timeTreshold)
         {
-            _isNotificationCalled = true;
+            _timeTreshold = _timeTreshold.AddDays(1);
             var (totalDiskSpace, totalFreeSpace) = GetDriveData("C:\\");
             new ToastContentBuilder()
                .AddArgument("DiskData", "")
